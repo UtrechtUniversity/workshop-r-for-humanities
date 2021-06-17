@@ -1,0 +1,433 @@
+---
+title: "tidytext_solutions"
+author: "Puck Wildschut"
+date: "16-6-2021"
+output: html_document
+---
+
+
+<!-- This code block sets some defaults for the code chunks, and can safely be ignored! -->
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Part I: The tidy text format
+
+## Exercise 7. Tidy format a text corpus
+
+# Tidy format a text corpus I
+
+```{r}
+
+install.packages("janeausten")
+install.packages("dplyr")
+install.packages("stringr")
+install.packages("tidytext")
+install.packages("ggplot2")
+install.packages("gutenbergr")
+install.packages("tidyr")
+install.packages("scales")
+install.packages("widyr")
+```
+
+```{r}
+# Exercise 7a.Now let’s start tidy-texting Dickinson’s poem. Run the following lines of code:
+
+text <- c("Because I could not stop for Death -",
+          "He kindly stopped for me -",
+          "The Carriage held but just Ourselves -",
+          "and Immortality")
+text
+```
+
+# Tidy format a text corpus II
+
+```{r}
+# Excercise 7b. Let’s call on a package from the Tidyverse that will give us the right data frame: dplyr. You can call on this package by running the following code: 
+
+
+library(dplyr)
+text_df <- tibble(line = 1:4, text = text)
+
+text_df
+```
+
+# Tidy format a text corpus IV
+
+```{r}
+# Excercise 7c. We will now break the text into individual tokens (tokenization) and transform it to a tidy data structure. To do this, call on the unnest_tokens() function:
+
+library(tidytext)
+
+text_df %>%
+  unnest_tokens(word, text)
+```
+
+## Exercise 8. Tidying Jane Austen's novels
+
+# Tidying Jane Austen's novels I
+
+```{r}
+# Excercise 8a. Based on the previous exercises with Dickenson’s poem, are you now able to call on the janeaustenr package, as well as the dplyr and stringr packages needed for your analysis?
+
+library(janeaustenr)
+library(dplyr)
+library(stringr)
+```
+
+## Tidying Jane Austen’s novels II
+
+```{r}
+# Excercise 8b. Run the following code… and then challenge yourself with exercise 8c!
+
+original_books <- austen_books() %>%
+  group_by(book) %>%
+  mutate(linenumber = row_number(),
+         chapter = cumsum(str_detect(text, 
+                                     regex("^chapter [\\divxlc]",
+                                           ignore_case = TRUE)))) %>%
+  ungroup()
+
+original_books
+```
+
+## Tidying Jane Austen’s novels III
+
+```{r}
+# Excercise 8c
+
+library(tidytext)
+tidy_books <- original_books %>%
+  unnest_tokens(word, text)
+
+tidy_books
+```
+
+## Tidying Jane Austen’s novels IV
+
+```{r}
+# Excercise 8d. This is the first time you call on a dataset from a package. Can you call on the anti_join() function by completing the code below?
+ 
+
+data(stop_words)
+
+tidy_books <- tidy_books %>%
+  anti_join(stop_words)
+
+# We can also use dplyr's count() to find the most common words in all the books as a whole.
+tidy_books %>%
+  count(word, sort = TRUE) 
+
+```
+
+## Tidying Jane Austen’s novels V
+
+```{r}
+# Excercise 8e. Let’s build ourselves a pipeline! Run this code and see what happens…
+
+library(ggplot2)
+
+tidy_books %>%
+  count(word, sort = TRUE) %>%
+  filter(n > 600) %>%
+  mutate(word = reorder(word, n)) %>%
+  ggplot(aes(n, word)) +
+  geom_col() +
+  labs(y = NULL)
+```
+
+### Part 2. Sentiment analysis with tidy text data
+
+## Exercise 9. Sentiment analysis of Austen's novels
+
+# Sentiment analysis with tidy text data IV
+
+```{r}
+#Exercise 9a. Can you call on the tidytext package and then use the function mentioned above to get tibbles of the three lexicons mentioned on the slide? Press 'enter' twice and start coding!
+
+library(tidytext)
+
+get_sentiments("afinn")
+get_sentiments("bing")
+get_sentiments("nrc")
+```
+
+# Sentiment analysis of Emma I
+```{r}
+
+# Exercise 9b.Let’s ask ourselves: What are the most common joy words in Austen’s novel Emma? Run this code in order to make your data tidy first and do some real code work in the next exercise!
+
+library(janeaustenr)
+library(dplyr)
+library(stringr)
+
+tidy_books <- austen_books() %>%
+  group_by(book) %>%
+  mutate(
+    linenumber = row_number(),
+    chapter = cumsum(str_detect(text, 
+                                regex("^chapter [\\divxlc]", 
+                                      ignore_case = TRUE)))) %>%
+  ungroup() %>%
+  unnest_tokens(word, text)
+```
+
+# Sentiment analysis of Emma II + III
+
+```{r}
+# Exercise 9c.We want to know what the most common joy words in Emma are. Can you complete the code and run the script based on the pointers on the slide?
+
+nrc_joy <- get_sentiments("nrc") %>% 
+  filter(sentiment == "joy")
+
+tidy_books %>%
+  filter(book == "Emma") %>%
+  inner_join(nrc_joy) %>%
+  count(word, sort = TRUE)
+```
+
+# Sentiment analysis of Austen’s novels I + II
+
+```{r}
+
+# Exercise 9d. We can also examine how sentiment changes throughout each of Austen’s novels. We can do this with just a handful of lines that are mostly dplyr functions. Can you complete the code and run the script based on the pointers on the slide? 
+
+
+library(tidyr)
+
+jane_austen_sentiment <- tidy_books %>%
+  inner_join(get_sentiments("bing")) %>%
+  count(book, index = linenumber %/% 80, sentiment) %>%
+  pivot_wider(names_from = sentiment, values_from = n, values_fill = 0) %>% 
+  mutate(sentiment = positive - negative)
+```
+
+## Sentiment analysis of Austen’s novels III
+
+```{r}
+
+#Exercise 9e. Call on the ggplot2 package (do you remember how to call on a package? You have done so numerous times before!) and then run the following code:
+
+
+library(ggplot2)
+ggplot(jane_austen_sentiment, aes(index, sentiment, fill = book)) +
+  geom_col(show.legend = FALSE) +
+  facet_wrap(~book, ncol = 2, scales = "free_x")
+```
+
+### Part 3. Analyzing word and document frequency: tf-idf
+
+## Exercise 10. Term frequency and inverse document frequency in Austen's novels 
+
+# Term frequency in Austen’s novels II 
+
+```{r}
+# Exercise 10a.Let’s start by looking at the novels of Austen and examine first term frequency, then tf-idf. We can start just by using dplyr verbs such as group_by() and join(). Can you fill in the blanks in the code below based on what you have learned so far and determine the most commonly used words in the novels? (Let’s also calculate the total words in each novel here, for later use)
+
+library(dplyr)
+library(janeaustenr)
+library(tidytext)
+
+book_words <- austen_books() %>%
+  unnest_tokens(word, text) %>%
+  count(book, word, sort = TRUE)
+
+total_words <- book_words %>% 
+  group_by(book) %>% 
+  summarize(total = sum(n))
+
+book_words <- left_join(book_words, total_words)
+
+book_words
+```
+
+# Term frequency in Austen’s novels III
+
+```{r}
+
+# Exercise 10b.Now let’s plot the distribution of n/total = the number of times a word is used in a book/the total words in that book. Do you remember what package to call on to plot this distribution?
+
+library(ggplot2)
+
+ggplot(book_words, aes(n/total, fill = book)) +
+  geom_histogram(show.legend = FALSE) +
+  xlim(NA, 0.0009) +
+  facet_wrap(~book, ncol = 2, scales = "free_y")
+```
+
+# Inverse document frequency in Austen’s novels I
+
+```{r}
+
+# Exercise 10c.Based on the column headers on the slide, can you fill in the code below and calculate tf-idf?
+
+
+book_tf_idf <- book_words %>%
+  bind_tf_idf(word, book, n)
+
+
+book_tf_idf %>%
+  select(-total) %>%
+  arrange(desc(tf_idf))
+```
+
+# Inverse document frequency in Austen’s novels II
+
+```{r}
+
+# Excercise 10d.Run the code below to plot the highest tf-idf words in each of Austen’s novels. Can you make it so that you plot the scores per novel? And can you make sure that we see tf-idf for the tokens/terms we have been analyzing? 
+
+library(forcats)
+
+book_tf_idf %>%
+  group_by(book) %>%
+  slice_max(tf_idf, n = 15) %>%
+  ungroup() %>%
+  ggplot(aes(tf_idf, fct_reorder(word, tf_idf), fill = book)) +
+  geom_col(show.legend = FALSE) +
+  facet_wrap(~book, ncol = 2, scales = "free") +
+  labs(x = "tf-idf", y = NULL)
+```
+
+### Chapter 4. Part 4: Relationships between words: n-grams and correlations
+
+## Exercise 11. Tokenizing Austen's novels by n-gram
+
+# Tokenizing Austen’s novels by n-gram I + II
+
+```{r}
+
+# Excercise 11a. Can you set the number of words in each n-gram to 2 in the code below? This allows us to examine pairs of two consecutive words, called ‘bigrams’ in Austen’s novels
+
+library(dplyr)
+library(tidytext)
+library(janeaustenr)
+
+austen_bigrams <- austen_books() %>%
+  unnest_tokens(bigram, text, token = "ngrams", n = 2)
+
+austen_bigrams
+```
+
+# Tokenizing Austen’s novels by n-gram III + IV
+
+```{r}
+
+# Exercise 11b.When we count our bigrams using dlpyr’s count(), we see that a lot of the most common bigrams are pairs of common words, like stop words. Run this code and you’ll see…
+
+
+austen_bigrams %>%
+  count(bigram, sort = TRUE)
+
+# We are of course not only interested in the stop word bigrams. So let’s filter our n-grams with tidyr’s separate() and remove cases where either word is a stop word. Run it! 
+
+library(tidyr)
+
+bigrams_separated <- austen_bigrams %>%
+  separate(bigram, c("word1", "word2"), sep = " ")
+
+bigrams_filtered <- bigrams_separated %>%
+  filter(!word1 %in% stop_words$word) %>%
+  filter(!word2 %in% stop_words$word)
+
+# new bigram counts:
+bigram_counts <- bigrams_filtered %>% 
+  count(word1, word2, sort = TRUE)
+
+bigram_counts
+```
+
+# Tokenizing Austen’s novels by n-gram V
+
+```{r}
+
+# Exercise 11c. We will now use tidyr’s unite() function to recombine the columns into one. Using the “separate/filter/count/unite” combination lets us find the most common bigrams not containing stop-words. Run the code below.
+
+
+bigrams_united <- bigrams_filtered %>%
+  unite(bigram, word1, word2, sep = " ")
+
+bigrams_united
+```
+
+# Tokenizing Austen’s novels by n-gram VI
+
+```{r}
+
+# Exercise 11d. We can look at the tf-idf of bigrams across Austen’s novels. These tf-idf values can be visualized within each book, just as we did for words. Can you complete the code below and produce a tibble and visualization of your results all at once?
+
+bigram_tf_idf <- bigrams_united %>%
+  count(book, bigram) %>%
+  bind_tf_idf(bigram, book, n) %>%
+  arrange(desc(tf_idf))
+
+bigram_tf_idf
+```
+
+##X Part 5: Counting and correlating pairs of words
+
+## Exercise 12. Counting and correlating among sections: Pride and Prejudice 
+
+# Counting and correlating among sections: Pride and Prejudice I
+
+```{r}
+
+# Exercise 12a. We want to find out what words tend to appear within each 10-line section of Austen’s Pride and Prejudice. Let’s first find the Most Common Words, filtering out stop words. Can you complete the code?
+
+austen_section_words <- austen_books() %>%
+  filter(book == "Pride & Prejudice") %>%
+  mutate(section = row_number() %/% 10) %>%
+  filter(section > 0) %>%
+  unnest_tokens(word, text) %>%
+  filter(!word %in% stop_words$word)
+
+austen_section_words
+```
+
+## Counting and correlating among sections: Pride and Prejudice II
+
+```{r}
+
+# Exercise 12b.Can you complete the count by using the function mentioned above and providing it with the information on what to count?
+
+library(widyr)
+
+# count words co-occuring within sections
+word_pairs <- austen_section_words %>%
+  pairwise_count(word, section, sort = TRUE)
+
+word_pairs
+```
+
+# Counting and correlating among sections: Pride and Prejudice IV
+
+```{r}
+
+# Excercise 12c.The syntax of the pairwise_corr() function is similar to that of pairwise_count(). Just run it!
+
+# we need to filter for at least relatively common words first
+word_cors <- austen_section_words %>%
+  group_by(word) %>%
+  filter(n() >= 20) %>%
+  pairwise_cor(word, section, sort = TRUE)
+
+word_cors
+```
+
+# Counting and correlating among sections: Pride and Prejudice V
+
+```{r}
+
+# Exercise 12d.Let’s pick some interesting words and find the other words most associated with them! You can pick your own and add them to the code below. And do you remember the function we have used a few times to plot your results? Fill it in as well!
+
+word_cors %>%
+  filter(item1 %in% c("???", "???", "???", "???")) %>%
+  group_by(item1) %>%
+  slice_max(correlation, n = 6) %>%
+  ungroup() %>%
+  mutate(item2 = reorder(item2, correlation)) %>%
+  ggplot(aes(item2, correlation)) +
+  geom_bar(stat = "identity") +
+  facet_wrap(~ item1, scales = "free") +
+  coord_flip()
+```
