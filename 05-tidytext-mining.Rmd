@@ -3,11 +3,6 @@
 ### Slides
 
 <embed src="slides/tidytext_slides.pdf" type="application/pdf" width="100%" height="600px" />
-
-
-```{r}
-knitr::include_url("https://github.com/nehamoopen/workshop-r-for-humanities/blob/main/slides/tidytext_slides.pdf")
-```
     
 ### Exercise
 
