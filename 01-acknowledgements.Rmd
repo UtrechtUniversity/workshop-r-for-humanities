@@ -1,21 +1,13 @@
-# Introduction {#intro}
+# Acknowledgements
 
-You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods).
+This workshop was developed at Utrecht University Library, by [Research Data Management (RDM) Support](https://www.uu.nl/en/research/research-data-management) team and [Digital Humanities Support](https://www.uu.nl/en/university-library/advice-support-to/researchers/digital-humanities-support).
 
-Figures and tables with captions will be placed in `figure` and `table` environments, respectively.
+The workshop is currently coordinated by [Puck Wildschut](https://www.uu.nl/staff/pawildschut), with support from [Aleksandre Gogaladze](https://www.uu.nl/staff/AGogaladze). 
 
-```{r nice-fig, fig.cap='Here is a nice figure!', out.width='80%', fig.asp=.75, fig.align='center'}
-par(mar = c(4, 4, .1, .1))
-plot(pressure, type = 'b', pch = 19)
-```
+The workshop has received contributions from (in alphabetical order):
+-   [Barbara Vreede](https://github.com/bvreede)
+-   [Jacques Flores](https://github.com/Mish-JPFD)
 
-Reference a figure by its code chunk label with the `fig:` prefix, e.g., see Figure \@ref(fig:nice-fig). Similarly, you can reference tables generated from `knitr::kable()`, e.g., see Table \@ref(tab:nice-tab).
+The workshop materials were put together in the current bookdown format by [Neha Moopen](https://github.com/nehamoopen).   
 
-```{r nice-tab, tidy=FALSE}
-knitr::kable(
-  head(iris, 20), caption = 'Here is a nice table!',
-  booktabs = TRUE
-)
-```
 
-You can write citations, too. For example, we are using the **bookdown** package [@R-bookdown] in this sample book, which was built on top of R Markdown and **knitr** [@xie2015].

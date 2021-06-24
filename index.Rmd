@@ -18,5 +18,4 @@ We will take you from the very basics in R syntax, to data handling and visualis
 
 This workshop specifically targets researchers working within the Humanities, focusing on the analysis of textual data (as found in poems and novels, for example). However, it is open to and useful for all UU employees who want to perform computational textual analyses.
 
-
-TODO: Our workshop material is licensed under a Creative Commons Attribution 4.0 International License. You can view the license here.
+Our workshop material is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). You can [view the license here](https://github.com/UtrechtUniversity/workshop-computational-reproducibility/blob/master/LICENSE.md).

@@ -1,0 +1,70 @@
+# Textmining with Tidy Text
+
+### Slides
+
+<embed src="slides/tidytext_slides.pdf" type="application/pdf" width="100%" height="600px" />
+
+<embed src="https://github.com/nehamoopen/workshop-r-for-humanities/blob/main/slides/tidytext_slides.pdf" type="application/pdf" width="100%" height="600px" />
+
+    <div>
+      <object
+        data='https://github.com/nehamoopen/workshop-r-for-humanities/blob/main/slides/tidytext_slides.pdf'
+        type="application/pdf"
+        width="500"
+        height="678"
+      >
+        <iframe
+          src='https://github.com/nehamoopen/workshop-r-for-humanities/blob/main/slides/tidytext_slides.pdf'
+          width="500"
+          height="678"
+        >
+        <p>This browser does not support PDF!</p>
+        </iframe>
+
+      </object>
+    </div>
+
+
+```{r}
+knitr::include_url("https://github.com/nehamoopen/workshop-r-for-humanities/blob/main/slides/tidytext_slides.pdf")
+```
+    
+### Exercise
+
+### Exercise
+
+### Solutions
+
+## Tidy Text Format
+
+### Slides
+
+### Exercise
+
+### Solutions
+
+## Sentiment Analysis
+
+### Slides
+
+### Exercise 
+
+### Solutions
+
+## Word & Document Frequency
+
+### Slides
+
+### Exercise
+
+### Solutions
+
+## Relationships Between Words
+
+### Slides
+
+### Exercise
+
+### Exercise
+
+### Solution
