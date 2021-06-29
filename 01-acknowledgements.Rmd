@@ -1,13 +1,12 @@
 # Acknowledgements
 
-This workshop was developed at Utrecht University Library, by [Research Data Management (RDM) Support](https://www.uu.nl/en/research/research-data-management) team and [Digital Humanities Support](https://www.uu.nl/en/university-library/advice-support-to/researchers/digital-humanities-support).
+This workshop was developed at Utrecht University Library, by [Research Data Management (RDM) Support](https://www.uu.nl/en/research/research-data-management) and [Digital Humanities Support](https://www.uu.nl/en/university-library/advice-support-to/researchers/digital-humanities-support).
 
-The workshop is currently coordinated by [Puck Wildschut](https://www.uu.nl/staff/pawildschut), with support from [Aleksandre Gogaladze](https://www.uu.nl/staff/AGogaladze). 
+The workshop is currently coordinated by [Puck Wildschut](https://www.uu.nl/staff/pawildschut), with support from [Aleksandre Gogaladze](https://www.uu.nl/staff/AGogaladze).
 
 The workshop has received contributions from (in alphabetical order):
+
 -   [Barbara Vreede](https://github.com/bvreede)
 -   [Jacques Flores](https://github.com/Mish-JPFD)
 
-The workshop materials were put together in the current bookdown format by [Neha Moopen](https://github.com/nehamoopen).   
-
-
+The workshop materials were put together in the current `bookdown` format by [Neha Moopen](https://github.com/nehamoopen).

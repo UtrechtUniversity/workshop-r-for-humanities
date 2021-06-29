@@ -1,0 +1,224 @@
+# Base R
+
+## R Syntax & Data Types
+
+### Slides
+
+```{r echo=FALSE}
+knitr::include_url("https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#18")
+```
+
+### Video
+
+```{r echo=FALSE}
+vembedr::embed_url("https://www.youtube.com/watch?v=S8zTmEvpYYk")
+```
+
+### Exercise 1
+
+1. Do the following calculation in R: one plus five, divided by nine.
+
+2. Assign the result of the calculation to a variable.
+
+3. Test if the result of your calculation is larger than 1.
+
+4. Round off the result to 1 decimal. Tip: use the Maths Functions section of the Base R cheat sheet!
+
+### Solution
+
+#### Slides
+
+```{r echo=FALSE}
+knitr::include_url("https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#28")
+```
+
+#### Video
+
+```{r echo=FALSE}
+vembedr::embed_url("https://www.youtube.com/watch?v=V8za6GR7u8Q&feature=youtu.be")
+```
+
+## Vectors in R
+
+### Slides
+
+```{r echo=FALSE}
+knitr::include_url("https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#18")
+```
+
+### Video
+
+```{r echo=FALSE}
+vembedr::embed_url("https://www.youtube.com/watch?v=XMFjteCdHbQ")
+```
+
+### Exercise 2
+
+Meet Ann, Bob, Chloe, and Dan.
+
+1. Make a character vector with their names, using the function c(). Save the vector as "name".
+
+2. How old are Ann, Bob, Chloe, and Dan? You decide! Design a numeric vector with their respective ages. Save it as "age".
+
+3. What is their average age? Use a function in R to calculate this. Tip: use the Maths Functions section of the Base R cheat sheet!
+
+### Solution
+
+#### Slides
+
+```{r echo=FALSE}
+knitr::include_url("https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#40
+")
+```
+
+#### Video
+
+```{r echo=FALSE}
+vembedr::embed_url("https://www.youtube.com/watch?v=rIieuoYT4z0")
+```
+
+## Data Structures
+
+### Slides
+
+```{r echo=FALSE}
+knitr::include_url("https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#41")
+```
+
+### Video
+
+```{r echo=FALSE}
+vembedr::embed_url("https://www.youtube.com/watch?v=Ffk2Kxa_b_M")
+```
+
+### Exercise 3
+
+1. Create a vector country containing four countries (use at least one duplicate!).
+
+2. Create a data frame combining name, age, and country, and save it as df.
+
+3. Check your dataframe with the function summary(). Does it contain a factor?
+
+4. Make sure your column country is a factor, and confirm this with summary().
+
+5. Create a list with your vectors name and age, and save it as mylist.
+
+### Solution
+
+#### Slides
+
+```{r echo=FALSE}
+knitr::include_url("https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#50
+")
+```
+
+#### Video
+
+```{r echo=FALSE}
+vembedr::embed_url("https://www.youtube.com/watch?v=A1GsHC6pIio")
+```
+
+## Missing Data
+
+### Slides
+
+```{r echo=FALSE}
+knitr::include_url("https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#41")
+```
+
+### Video
+
+```{r echo=FALSE}
+vembedr::embed_url("https://www.youtube.com/watch?v=Ffk2Kxa_b_M")
+```
+
+### Exercise 4
+
+Predict the results before you run the code. Does the real answer make sense to you?
+
+### Solution
+
+#### Slides
+
+```{r echo=FALSE}
+knitr::include_url("https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#63
+")
+```
+
+## Indexing Vectors & Lists
+
+### Slides
+
+```{r echo=FALSE}
+knitr::include_url("https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#66")
+```
+
+### Video
+
+```{r echo=FALSE}
+vembedr::embed_url("https://www.youtube.com/watch?v=e10nO2swYIE")
+```
+
+### Exercise 5
+
+1. Return only the first number in your vector age.
+
+2. Return the 2nd and 4th name in your vector name.
+
+3. Return only ages under 30 from your vector age.
+
+4. Return the name "Chloe" from your list mylist (see exercise 3).
+
+### Solution
+
+#### Slides
+
+```{r echo=FALSE}
+knitr::include_url("https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#79
+")
+```
+
+#### Video
+
+```{r echo=FALSE}
+vembedr::embed_url("https://www.youtube.com/watch?v=4BZGGq-nBos")
+```
+
+## Indexing a Data Frame
+
+### Slides
+
+```{r echo=FALSE}
+knitr::include_url("https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#80")
+```
+
+### Video
+
+```{r echo=FALSE}
+vembedr::embed_url("https://www.youtube.com/watch?v=m15hbXG6I-Y")
+```
+
+### Exercise 6
+
+1. From your dataframe df, return the entries for everyone living in a country of your choice.
+
+2. Return only the names of everyone in your data frame df under 40. 
+   (Hint: what information should you use for row indexing? 
+	 What information should you use for column indexing?)
+	 
+3. Return the columns name and age together.
+
+### Solution
+
+#### Slides
+
+```{r echo=FALSE}
+knitr::include_url("https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#91
+")
+```
+
+#### Video
+
+```{r echo=FALSE}
+vembedr::embed_url("https://www.youtube.com/watch?v=DUk9bfcSwbA")
+```

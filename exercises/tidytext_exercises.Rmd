@@ -280,7 +280,7 @@ book_tf_idf %>%
   labs(x = "tf-idf", y = NULL)
 ```
 
-### Chapter 4. Part 4: Relationships between words: n-grams and correlations
+### Part 4: Relationships between words: n-grams and correlations
 
 ## Exercise 11. Tokenizing Austen's novels by n-gram
 
@@ -304,7 +304,7 @@ austen_bigrams
 
 ```{r}
 
-# Exercise 11b.When we count our bigrams using dlpyr’s count(), we see that a lot of the most common bigrams are pairs of common words, like stop words. Run this code and you’ll see…
+# Exercise 11b.When we count our bigrams using dlpyr’s count(), we see that a lot of the most common bigrams are pairs of common words, like stop words. Run this piece of code and you’ll see…
 
 
 austen_bigrams %>%
@@ -345,7 +345,7 @@ bigrams_united
 
 ```{r}
 
-# Exercise 11d. We can look at the tf-idf of bigrams across Austen’s novels. These tf-idf values can be visualized within each book, just as we did for words. Can you complete the code below and produce a tibble and visualization of your results all at once?
+# Exercise 11d. We can look at the tf-idf of bigrams across Austen’s novels. Can you complete the code below and produce a tibble of your results?
 
 bigram_tf_idf <- bigrams_united %>%
   count(book, bigram) %>%
@@ -355,7 +355,6 @@ bigram_tf_idf <- bigrams_united %>%
 bigram_tf_idf
 ```
 
-##X Part 5: Counting and correlating pairs of words
 
 ## Exercise 12. Counting and correlating among sections: Pride and Prejudice 
 
