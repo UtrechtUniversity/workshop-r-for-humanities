@@ -26,13 +26,13 @@ vembedr::embed_url("https://www.youtube.com/watch?v=S8zTmEvpYYk")
 
 ### Solution
 
-#### Slides
+#### Slides {-}
 
 ```{r echo=FALSE}
 knitr::include_url("https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#28")
 ```
 
-#### Video
+#### Video {-}
 
 ```{r echo=FALSE}
 vembedr::embed_url("https://www.youtube.com/watch?v=V8za6GR7u8Q&feature=youtu.be")
@@ -43,7 +43,7 @@ vembedr::embed_url("https://www.youtube.com/watch?v=V8za6GR7u8Q&feature=youtu.be
 ### Slides
 
 ```{r echo=FALSE}
-knitr::include_url("https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#18")
+knitr::include_url("https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#28")
 ```
 
 ### Video
@@ -64,14 +64,14 @@ Meet Ann, Bob, Chloe, and Dan.
 
 ### Solution
 
-#### Slides
+#### Slides {-}
 
 ```{r echo=FALSE}
 knitr::include_url("https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#40
 ")
 ```
 
-#### Video
+#### Video {-}
 
 ```{r echo=FALSE}
 vembedr::embed_url("https://www.youtube.com/watch?v=rIieuoYT4z0")
@@ -105,14 +105,14 @@ vembedr::embed_url("https://www.youtube.com/watch?v=Ffk2Kxa_b_M")
 
 ### Solution
 
-#### Slides
+#### Slides {-}
 
 ```{r echo=FALSE}
 knitr::include_url("https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#50
 ")
 ```
 
-#### Video
+#### Video {-}
 
 ```{r echo=FALSE}
 vembedr::embed_url("https://www.youtube.com/watch?v=A1GsHC6pIio")
@@ -138,7 +138,7 @@ Predict the results before you run the code. Does the real answer make sense to 
 
 ### Solution
 
-#### Slides
+#### Slides {-}
 
 ```{r echo=FALSE}
 knitr::include_url("https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#63
@@ -171,14 +171,14 @@ vembedr::embed_url("https://www.youtube.com/watch?v=e10nO2swYIE")
 
 ### Solution
 
-#### Slides
+#### Slides {-}
 
 ```{r echo=FALSE}
 knitr::include_url("https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#79
 ")
 ```
 
-#### Video
+#### Video {-}
 
 ```{r echo=FALSE}
 vembedr::embed_url("https://www.youtube.com/watch?v=4BZGGq-nBos")
@@ -210,14 +210,14 @@ vembedr::embed_url("https://www.youtube.com/watch?v=m15hbXG6I-Y")
 
 ### Solution
 
-#### Slides
+#### Slides {-}
 
 ```{r echo=FALSE}
 knitr::include_url("https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#91
 ")
 ```
 
-#### Video
+#### Video {-}
 
 ```{r echo=FALSE}
 vembedr::embed_url("https://www.youtube.com/watch?v=DUk9bfcSwbA")

@@ -1,0 +1,65 @@
+# Textmining with Tidy Text
+
+## Tidy Text Format
+
+### Slides
+
+<embed src="slides/pdf/1_tidy-text_slides.pdf" type="application/pdf" width="100%" height="600px" />
+
+### Exercise 7 
+
+Tidy format a text corpus.
+
+### Exercise 8
+
+Tidying Jane Austen's novels
+
+### Solution
+
+<embed src="slides/pdf/1_tidy-text_solution.pdf" type="application/pdf" width="100%" height="600px" />
+
+## Sentiment Analysis
+
+### Slides
+
+<embed src="slides/pdf/2_sentiment-analysis_slides.pdf" type="application/pdf" width="100%" height="600px" />
+
+### Exercise 9
+
+Sentiment analysis of Austen's novels.
+
+### Solution
+
+<embed src="slides/pdf/2_sentiment-analysis_solution.pdf" type="application/pdf" width="100%" height="600px" />
+
+## Word & Document Frequency
+
+### Slides
+
+<embed src="slides/pdf/3_word-and-document-frequency_slides.pdf" type="application/pdf" width="100%" height="600px" />
+
+### Exercise 10
+
+Term frequency and inverse document frequency in Austen's novels.
+
+### Solution
+
+<embed src="slides/pdf/3_word-and-document-frequency_solution.pdf" type="application/pdf" width="100%" height="600px" />
+
+## Relationships Between Words
+
+### Slides
+
+<embed src="slides/pdf/4_relationships-between-words_slides.pdf" type="application/pdf" width="100%" height="600px" />
+
+### Exercise 11
+
+Tokenizing Austen's novels by n-gram.
+
+### Exercise 12
+
+Counting and correlating among sections: Pride and Prejudice.
+
+### Solution
+
+<embed src="slides/pdf/4_relationships-between-words_solution.pdf" type="application/pdf" width="100%" height="600px" />

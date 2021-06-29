@@ -1,0 +1,27 @@
+# Course Materials
+
+For convenience, we've put together links to all the course materials on this page. 
+
+### Introduction {-}
+
+[Slides]()
+
+### Base R {-}
+
+| Subject | Slides | Video | Exercise | Solution Slide | Solution Video |
+|:--------|:-------|:------|:---------|:-------------|:-------------|
+| R Syntax & data types | [Slides](https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#18) | [Video](https://youtu.be/S8zTmEvpYYk) | Exercise 1 | [Solution Slide](https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#27) | [Solution Video](https://youtu.be/V8za6GR7u8Q) |
+| Vectors in R | [Slides](https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#28) | [Video](https://youtu.be/XMFjteCdHbQ) | Exercise 2 | [Solution Slide](https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#40) | [Solution video](https://youtu.be/rIieuoYT4z0) |
+| Data structures | [Slides](https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#41) | [Video](https://youtu.be/Ffk2Kxa_b_M) | Exercise 3 | [Solution Slide](https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#50) | [Solution Video](https://youtu.be/A1GsHC6pIio) |
+| Missing data | [Slides](https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#53) | [Video](https://youtu.be/4gVvlg1Itzs) | Exercise 4 | [Solution Slide](https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#63) | - |
+| Indexing vectors & lists | [Slides](https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#66) | [Video](https://youtu.be/e10nO2swYIE) | Exercise 5 | [Solution Slide](https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#79) | [Solution Video](https://youtu.be/4BZGGq-nBos) |
+| Indexing a data frame | [Slides](https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#80) | [Video](https://youtu.be/m15hbXG6I-Y) | Exercise 6 | [Soltion Slide](https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#91) | [Solution Video](https://youtu.be/DUk9bfcSwbA) |
+
+### Textmining with Tidy Text {-}
+
+| Subject | Slides | Exercise | Solution Slide | 
+|:--------|:-------|:---------|:-------------|
+| Tidy Text Format | [Slides]() | Exercises 7 & 8 | [Slides]()
+| Sentiment Analysi| [Slides]() | Exercise 9 | [Slides]()
+| Word & Document Frequency | [Slides]() | Exercise 10 | [Slides]()
+| Relationships Between Words | [Slides]() | Exercises 11 & 12 | [Slides]()

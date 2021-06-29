@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>8.1 Tidy Text Format | R for Humanities</title>
+  <title>4.2 Troubleshooting | R for Humanities</title>
   <meta name="description" content="Materials for the workshop ‘R for Humanities’ (???)" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="8.1 Tidy Text Format | R for Humanities" />
+  <meta property="og:title" content="4.2 Troubleshooting | R for Humanities" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="8.1 Tidy Text Format | R for Humanities" />
+  <meta name="twitter:title" content="4.2 Troubleshooting | R for Humanities" />
   
   <meta name="twitter:description" content="Materials for the workshop ‘R for Humanities’ (???)" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="textmining-with-tidy-text-1.html"/>
-<link rel="next" href="sentiment-analysis.html"/>
+<link rel="prev" href="installation.html"/>
+<link rel="next" href="course-materials.html"/>
 <script src="libs/header-attrs-2.8/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -259,32 +259,81 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="tidy-text-format" class="section level2" number="8.1">
-<h2><span class="header-section-number">8.1</span> Tidy Text Format</h2>
-<div id="slides-12" class="section level3" number="8.1.1">
-<h3><span class="header-section-number">8.1.1</span> Slides</h3>
-<embed src="slides/pdf/1_tidy-text_slides.pdf" type="application/pdf" width="100%" height="600px" />
+<div id="troubleshooting" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> Troubleshooting</h2>
+<div id="packages-are-being-installed-on-a-mounted-drive" class="section level3" number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> Packages are being installed on a mounted drive</h3>
+<p>This can cause various errors, and even if everything goes right, installing tidyverse takes ages.</p>
+<p>Solution 1:</p>
+<ul>
+<li>There is a solution to prevent problems with mounted drives for applications like R, RStudio and Office. Read more about the solution on intranet. <a href="https://intranet.uu.nl/en/current-affairs/announcements/would-you-make-your-solis-laptop-work-more-efficiently" class="uri">https://intranet.uu.nl/en/current-affairs/announcements/would-you-make-your-solis-laptop-work-more-efficiently</a></li>
+</ul>
+<p>Solution 2:</p>
+<ul>
+<li>Create a folder <code>R-packages</code> on a local drive.</li>
+<li>Copy the location to that drive. For example: <code>C:/Users/User/R-packages</code>.</li>
+<li>Run the following line of code: <code>file.edit(file.path("~", ".Rprofile"))</code></li>
+<li>Paste <code>.libPaths("C:/Users/User/R-packages")</code> in the editor and save the file.</li>
+<li>Restart your R session</li>
+<li>Click on <code>Packages</code>&gt;<code>Install</code>. Is <code>Install to library</code> pointing to <code>C:/Users/User/R-packages</code>?</li>
+<li>If not: check if the path is correctly spelled. Try inverting the slashes (<code>\</code> instead of <code>/</code>). You may need to use double slashes (<code>\\</code> or <code>//</code>).</li>
+<li>Tick ‘source on save’, click save, and check <code>Packages</code>&gt;<code>Install</code> again.</li>
+</ul>
 </div>
-<div id="exercise-7" class="section level3" number="8.1.2">
-<h3><span class="header-section-number">8.1.2</span> Exercise 7</h3>
-<p>Tidy format a text corpus.</p>
+<div id="tidyverse-installation-is-aborted" class="section level3" number="4.2.2">
+<h3><span class="header-section-number">4.2.2</span> Tidyverse installation is aborted</h3>
+<p>If the installation of tidyverse is aborted, and packages are downloaded but their installation is said to have <code>non zero exit status</code>, you may be dealing with an old version of R.
+Update R by installing a recent version from <a href="https://cran.rstudio.com/">CRAN</a>.
+Then try installing tidyverse again.</p>
+<p>Do you have Rtools installed?
+(Only on Windows; it is not clear why this works but it sometimes does.)
+Install this via <a href="https://cran.r-project.org/bin/windows/Rtools/">cran.r-project.org/bin/windows/Rtools/</a>.</p>
 </div>
-<div id="exercise-8" class="section level3" number="8.1.3">
-<h3><span class="header-section-number">8.1.3</span> Exercise 8</h3>
-<p>Tidying Jane Austen’s novels</p>
+<div id="unable-to-move-temporary-installation-windows-error" class="section level3" number="4.2.3">
+<h3><span class="header-section-number">4.2.3</span> “Unable to move temporary installation” (Windows error)</h3>
+<p>Do you get issues like this:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="troubleshooting.html#cb2-1"></a><span class="op">&gt;</span><span class="st"> </span><span class="kw">install.packages</span>(<span class="st">&quot;tibble&quot;</span>)</span>
+<span id="cb2-2"><a href="troubleshooting.html#cb2-2"></a>Installing package into ‘C<span class="op">:</span><span class="er">/</span>Users<span class="op">/</span>UserName<span class="op">/</span>R’</span>
+<span id="cb2-3"><a href="troubleshooting.html#cb2-3"></a>(as ‘lib’ is unspecified)</span>
+<span id="cb2-4"><a href="troubleshooting.html#cb2-4"></a>trying URL <span class="st">&#39;https://cran.rstudio.com/bin/windows/contrib/3.4/tibble_1.4.2.zip&#39;</span></span>
+<span id="cb2-5"><a href="troubleshooting.html#cb2-5"></a>Content type <span class="st">&#39;application/zip&#39;</span> length <span class="dv">172649</span> <span class="kw">bytes</span> (<span class="dv">168</span> KB)</span>
+<span id="cb2-6"><a href="troubleshooting.html#cb2-6"></a>downloaded <span class="dv">168</span> KB</span>
+<span id="cb2-7"><a href="troubleshooting.html#cb2-7"></a></span>
+<span id="cb2-8"><a href="troubleshooting.html#cb2-8"></a>package ‘tibble’ successfully unpacked and MD5 sums checked</span>
+<span id="cb2-9"><a href="troubleshooting.html#cb2-9"></a>Warning <span class="cf">in</span> install.packages <span class="op">:</span></span>
+<span id="cb2-10"><a href="troubleshooting.html#cb2-10"></a><span class="st">  </span>unable to move temporary installation ‘C<span class="op">:</span>\Users\UserName\R\file18b813387562\tibble’ to ‘C<span class="op">:</span>\Users\UserName\R\tibble’</span>
+<span id="cb2-11"><a href="troubleshooting.html#cb2-11"></a>The downloaded binary packages are <span class="cf">in</span></span>
+<span id="cb2-12"><a href="troubleshooting.html#cb2-12"></a>C<span class="op">:</span>\Users\UserName\AppData\Local\Temp\RtmpYh5ogU\downloaded_packages</span></code></pre></div>
+<p>Check for the line <strong>unable to move temporary installation</strong>. Your virus scanner might be blocking the installation of tidyverse.</p>
+<p>The solution (<a href="https://code.adonline.id.au/unable-to-move-temporary-installation-r/">found here</a>) is to enter:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="troubleshooting.html#cb3-1"></a><span class="kw">trace</span>(utils<span class="op">:::</span>unpackPkgZip, <span class="dt">edit=</span><span class="ot">TRUE</span>)</span></code></pre></div>
+<p>You should see:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="troubleshooting.html#cb4-1"></a>Tracing <span class="cf">function</span> <span class="st">&quot;unpackPkgZip&quot;</span> <span class="cf">in</span> package <span class="st">&quot;utils (not-exported)&quot;</span></span>
+<span id="cb4-2"><a href="troubleshooting.html#cb4-2"></a>[<span class="dv">1</span>] <span class="st">&quot;unpackPkgZip&quot;</span></span></code></pre></div>
+<p>And a file should open.
+Change 0.5 in line 142 to 2.5, save the file, and try installing tidyverse again.</p>
 </div>
-<div id="solution-6" class="section level3" number="8.1.4">
-<h3><span class="header-section-number">8.1.4</span> Solution</h3>
-<embed src="slides/pdf/1_tidy-text_solution.pdf" type="application/pdf" width="100%" height="600px" />
+<div id="librarytidyverse-loading-failed" class="section level3" number="4.2.4">
+<h3><span class="header-section-number">4.2.4</span> Library(tidyverse) loading failed</h3>
+<p>Dependencies might be missing, or outdated, and need to be installed/updated manually.
+For instance, you see the following error:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="troubleshooting.html#cb5-1"></a>Error<span class="op">:</span><span class="st"> </span>package or namespace load failed <span class="cf">for</span> <span class="st">&#39;tidyverse&#39;</span>in <span class="kw">loadNamespace</span>(...)</span>
+<span id="cb5-2"><a href="troubleshooting.html#cb5-2"></a>namespace <span class="st">&#39;bindrcpp&#39;</span> <span class="fl">0.2</span> is being loaded, but <span class="op">&gt;=</span><span class="st"> </span><span class="dv">0</span>.<span class="dv">2</span>.<span class="fl">0.9000</span> is required.</span></code></pre></div>
+<p>Run <code>install.packages("bindrcpp")</code>to update this package.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="troubleshooting.html#cb6-1"></a>Error<span class="op">:</span><span class="st"> </span>package or namespace load failed <span class="cf">for</span> <span class="st">&#39;tidyverse&#39;</span>in <span class="kw">loadNamespace</span>(...)</span>
+<span id="cb6-2"><a href="troubleshooting.html#cb6-2"></a>there is no package <span class="kw">called</span> (xxx)</span></code></pre></div>
+<p>The same solution as above applies: run <code>install.packages()</code> to add whatever package is missing. (At the time of writing, it is not clear why these packages are missing; this error was received over email.)</p>
+
 </div>
 </div>
+<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="textmining-with-tidy-text-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="sentiment-analysis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="installation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="course-materials.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
