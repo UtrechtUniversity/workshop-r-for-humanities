@@ -12,6 +12,10 @@ description: "Materials for the workshop 'R for Humanities' @UtrechtUniversity"
 
 # Welcome!
 
+```{r echo=FALSE}
+knitr::include_graphics("images/cover_r-for-humanities.png")
+```
+
 R is a powerful scripting language for data handling, data visualization, and statistics. In this workshop, we aim to give you the tools to start exploring R and all it has to offer by yourself. 
 
 We will take you from the very basics in R syntax, to data handling and visualisation using a set of tools known as the ‘tidyverse’. You will learn how to perform text mining using the ‘tidytext’ package, enabling you to handle your own data in a clean, robust, and reproducible manner. We will work in RStudio and introduce R as well as R Markdown: this is a great way to combine code and its output with text, allowing you to code in a narrative and intuitive way. Moreover, this way you produce a human-readable document with which you can easily share and showcase your work. 
@@ -19,4 +23,3 @@ We will take you from the very basics in R syntax, to data handling and visualis
 This workshop specifically targets researchers working within the Humanities, focusing on the analysis of textual data (as found in poems and novels, for example). However, it is open to and useful for all UU employees who want to perform computational textual analyses.
 
 Our workshop material is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). You can [view the license here](https://github.com/UtrechtUniversity/workshop-r-for-humanities/blob/master/LICENSE.md).
-
