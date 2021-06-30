@@ -4,9 +4,11 @@ For convenience, we've put together links to all the course materials on this pa
 
 ### Introduction {-}
 
-[Slides]()
+[Introduction Slides](https://github.com/UtrechtUniversity/workshop-r-for-humanities/raw/main/slides/pdf/0_introduction_slides.pdf)
 
 ### Base R {-}
+
+- Link to Base R exercises in R Markdown: [baseR_exercises.Rmd](https://github.com/UtrechtUniversity/workshop-r-for-humanities/blob/main/exercises/baseR_exercises.Rmd)
 
 | Subject | Slides | Video | Exercise | Solution Slide | Solution Video |
 |:--------|:-------|:------|:---------|:-------------|:-------------|
@@ -19,9 +21,12 @@ For convenience, we've put together links to all the course materials on this pa
 
 ### Textmining with Tidy Text {-}
 
+- Link to Tidy Text exercises document in R Markdown: [tidytext_exercises.Rmd](https://github.com/UtrechtUniversity/workshop-r-for-humanities/raw/main/exercises/tidytext_exercises.Rmd)
+- Link to Tidy Text solutions document in R Markdown: [tidytext_codingsolutions.Rmd](https://github.com/UtrechtUniversity/workshop-r-for-humanities/blob/main/exercises/tidytext_codingsolutions.Rmd)
+
 | Subject | Slides | Exercise | Solution Slide | 
 |:--------|:-------|:---------|:-------------|
-| Tidy Text Format | [Slides]() | Exercises 7 & 8 | [Slides]()
-| Sentiment Analysi| [Slides]() | Exercise 9 | [Slides]()
-| Word & Document Frequency | [Slides]() | Exercise 10 | [Slides]()
-| Relationships Between Words | [Slides]() | Exercises 11 & 12 | [Slides]()
+| Tidy Text Format | [Slides](https://github.com/UtrechtUniversity/workshop-r-for-humanities/raw/main/slides/pdf/1_tidy-text_slides.pdf) | Exercises 7 & 8 | [Slides](https://github.com/UtrechtUniversity/workshop-r-for-humanities/raw/main/slides/pdf/1_tidy-text_solution.pdf)
+| Sentiment Analysis| [Slides](https://github.com/UtrechtUniversity/workshop-r-for-humanities/raw/main/slides/pdf/2_sentiment-analysis_slides.pdf) | Exercise 9 | [Slides](https://github.com/UtrechtUniversity/workshop-r-for-humanities/raw/main/slides/pdf/2_sentiment-analysis_solution.pdf)
+| Word & Document Frequency | [Slides](https://github.com/UtrechtUniversity/workshop-r-for-humanities/raw/main/slides/pdf/3_word-and-document-frequency_slides.pdf) | Exercise 10 | [Slides](https://github.com/UtrechtUniversity/workshop-r-for-humanities/raw/main/slides/pdf/3_word-and-document-frequency_solution.pdf)
+| Relationships Between Words | [Slides](https://github.com/UtrechtUniversity/workshop-r-for-humanities/raw/main/slides/pdf/4_relationships-between-words_slides.pdf) | Exercises 11 & 12 | [Slides](https://github.com/UtrechtUniversity/workshop-r-for-humanities/raw/main/slides/pdf/4_relationships-between-words_solution.pdf)
