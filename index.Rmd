@@ -10,7 +10,7 @@ link-citations: yes
 description: "Materials for the workshop 'R for Humanities' @UtrechtUniversity"
 ---
 
-# Welcome!
+# Welcome! 
 
 ```{r echo=FALSE}
 knitr::include_graphics("images/cover_r-for-humanities.png")
