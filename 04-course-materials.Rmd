@@ -1,6 +1,6 @@
 # Course Materials
 
-For convenience, we've put together links to all the course materials on this page. 
+For convenience, we've put together links to all the course materials on this page. You can also download a zipped folder containing the R Markdown files & pdf slides: [2021-06-30_r-for-humanities_course-materials.zip](https://github.com/UtrechtUniversity/workshop-r-for-humanities/raw/main/2021-06-30_r-for-humanities_course-materials.zip)
 
 ### Introduction {-}
 
@@ -8,7 +8,9 @@ For convenience, we've put together links to all the course materials on this pa
 
 ### Base R {-}
 
-- Link to Base R exercises in R Markdown: [baseR_exercises.Rmd](https://github.com/UtrechtUniversity/workshop-r-for-humanities/blob/main/exercises/baseR_exercises.Rmd)
+- Link to Base R exercises in R Markdown: [baseR_exercises.Rmd](https://github.com/UtrechtUniversity/workshop-r-for-humanities/blob/main/exercises/baseR_exercises.Rmd). 
+
+FYI: The R Markdown file will not download automatically. The slides are in HTML and can be opened in new tabs (if more convenient). The same goes for the videos which are available on YouTube.
 
 | Subject | Slides | Video | Exercise | Solution Slide | Solution Video |
 |:--------|:-------|:------|:---------|:-------------|:-------------|
@@ -21,8 +23,10 @@ For convenience, we've put together links to all the course materials on this pa
 
 ### Textmining with Tidy Text {-}
 
-- Link to Tidy Text exercises document in R Markdown: [tidytext_exercises.Rmd](https://github.com/UtrechtUniversity/workshop-r-for-humanities/raw/main/exercises/tidytext_exercises.Rmd)
+- Link to Tidy Text exercises document in R Markdown: [tidytext_exercises.Rmd](https://github.com/UtrechtUniversity/workshop-r-for-humanities/blob/main/exercises/tidytext_exercises.Rmd)
 - Link to Tidy Text solutions document in R Markdown: [tidytext_codingsolutions.Rmd](https://github.com/UtrechtUniversity/workshop-r-for-humanities/blob/main/exercises/tidytext_codingsolutions.Rmd)
+
+FYI: The R Markdown files won't download automatically, but the slides for this section, which are in pdf format, will land on your computer somewhere.
 
 | Subject | Slides | Exercise | Solution Slide | 
 |:--------|:-------|:---------|:-------------|
