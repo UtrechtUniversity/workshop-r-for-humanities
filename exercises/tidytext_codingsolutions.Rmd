@@ -27,6 +27,7 @@ install.packages("ggplot2")
 install.packages("tidyr")
 install.packages("scales")
 install.packages("widyr")
+install.packages("textdata")
 ```
 
 ```{r}
