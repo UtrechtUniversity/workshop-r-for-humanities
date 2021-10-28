@@ -4,10 +4,11 @@
 
 ### Slides
 
-```{r echo=FALSE}
-knitr::include_url("https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#18")
+```{r embed-xaringan-1, echo=FALSE}
+xaringanExtra::embed_xaringan(url = "https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#18", ratio = "4:3")
 ```
-]Click here to open slides in a new tab (refer to slide #18)]()
+
+[Use this link to open slides in a new tab (refer to slide #18)](https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#18)
 
 ### Video
 
@@ -29,10 +30,11 @@ vembedr::embed_url("https://www.youtube.com/watch?v=S8zTmEvpYYk")
 
 #### Slides {-}
 
-```{r echo=FALSE}
-knitr::include_url("https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#27")
+```{r embed-xaringan-2, echo=FALSE}
+xaringanExtra::embed_xaringan(url = "https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#27", ratio = "4:3")
 ```
-[Click here to open slides in a new tab (refer to slide #27)]()
+
+[Use this link to open slides in a new tab (refer to slide #27)](https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#27)
 
 #### Video {-}
 
@@ -44,10 +46,11 @@ vembedr::embed_url("https://www.youtube.com/watch?v=V8za6GR7u8Q&feature=youtu.be
 
 ### Slides
 
-```{r echo=FALSE}
-knitr::include_url("https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#28")
+```{r embed-xaringan-3, echo=FALSE}
+xaringanExtra::embed_xaringan(url = "https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#28", ratio = "4:3")
 ```
-[Click here to open slides in a new tab (refer to slide #28)]()
+
+[Use this link to open slides in a new tab (refer to slide #28)](https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#28)
 
 ### Video
 
@@ -69,11 +72,12 @@ Meet Ann, Bob, Chloe, and Dan.
 
 #### Slides {-}
 
-```{r echo=FALSE}
-knitr::include_url("https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#40
-")
+
+```{r embed-xaringan-4, echo=FALSE}
+xaringanExtra::embed_xaringan(url = "https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#40", ratio = "4:3")
 ```
-[Click here to open slides in a new tab (refer to slide #40)]()
+
+[Use this link to open slides in a new tab (refer to slide #40)](https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#40)
 
 #### Video {-}
 
@@ -85,10 +89,11 @@ vembedr::embed_url("https://www.youtube.com/watch?v=rIieuoYT4z0")
 
 ### Slides
 
-```{r echo=FALSE}
-knitr::include_url("https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#41")
+```{r embed-xaringan-5, echo=FALSE}
+xaringanExtra::embed_xaringan(url = "https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#41", ratio = "4:3")
 ```
-[Click here to open slides in a new tab (refer to slide #41)]()
+
+[Use this link to open slides in a new tab (refer to slide #41)](https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#41)
 
 ### Video
 
@@ -112,11 +117,11 @@ vembedr::embed_url("https://www.youtube.com/watch?v=Ffk2Kxa_b_M")
 
 #### Slides {-}
 
-```{r echo=FALSE}
-knitr::include_url("https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#50
-")
+```{r embed-xaringan-6, echo=FALSE}
+xaringanExtra::embed_xaringan(url = "https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#50", ratio = "4:3")
 ```
-[Click here to open slides in a new tab (refer to slide #50)](https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#50)
+
+[Use this link to open slides in a new tab (refer to slide #50)](https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#50)
 
 #### Video {-}
 
@@ -128,15 +133,16 @@ vembedr::embed_url("https://www.youtube.com/watch?v=A1GsHC6pIio")
 
 ### Slides
 
-```{r echo=FALSE}
-knitr::include_url("https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#41")
+```{r embed-xaringan-7, echo=FALSE}
+xaringanExtra::embed_xaringan(url = "https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#53", ratio = "4:3")
 ```
-[Click here to open slides in a new tab (refer to slide #41)](https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#41)
+
+[Use this link to open slides in a new tab (refer to slide #53)](https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#53)
 
 ### Video
 
 ```{r echo=FALSE}
-vembedr::embed_url("https://www.youtube.com/watch?v=Ffk2Kxa_b_M")
+vembedr::embed_url("https://www.youtube.com/watch?v=4gVvlg1Itzs")
 ```
 
 ### Exercise 4
@@ -147,20 +153,20 @@ Predict the results before you run the code. Does the real answer make sense to 
 
 #### Slides {-}
 
-```{r echo=FALSE}
-knitr::include_url("https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#63
-")
+```{r embed-xaringan-8, echo=FALSE}
+xaringanExtra::embed_xaringan(url = "https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#63", ratio = "4:3")
 ```
-[Click here to open slides in a new tab (refer to slide #63)](https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#63)
+
+[Use this link to open slides in a new tab (refer to slide #63)](https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#63)
 
 ## Indexing Vectors & Lists
 
 ### Slides
-
-```{r echo=FALSE}
-knitr::include_url("https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#66")
+```{r embed-xaringan-9, echo=FALSE}
+xaringanExtra::embed_xaringan(url = "https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#66", ratio = "4:3")
 ```
-[Click here to open slides in a new tab (refer to slide #66)](https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#66)
+
+[Use this link to open slides in a new tab (refer to slide #66)](https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#66)
 
 ### Video
 
@@ -182,11 +188,11 @@ vembedr::embed_url("https://www.youtube.com/watch?v=e10nO2swYIE")
 
 #### Slides {-}
 
-```{r echo=FALSE}
-knitr::include_url("https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#79
-")
+```{r embed-xaringan-10, echo=FALSE}
+xaringanExtra::embed_xaringan(url = "https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#79", ratio = "4:3")
 ```
-[Click here to open slides in a new tab (refer to slide #79)](https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#79)
+
+[Use this link to open slides in a new tab (refer to slide #79)](https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#79)
 
 #### Video {-}
 
@@ -198,10 +204,11 @@ vembedr::embed_url("https://www.youtube.com/watch?v=4BZGGq-nBos")
 
 ### Slides
 
-```{r echo=FALSE}
-knitr::include_url("https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#80")
+```{r embed-xaringan-11, echo=FALSE}
+xaringanExtra::embed_xaringan(url = "https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#80", ratio = "4:3")
 ```
-[Click here to open slides in a new tab (refer to slide #80)](https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#80)
+
+[Use this link to open slides in a new tab (refer to slide #80)](https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#80)
 
 ### Video
 
@@ -223,11 +230,11 @@ vembedr::embed_url("https://www.youtube.com/watch?v=m15hbXG6I-Y")
 
 #### Slides {-}
 
-```{r echo=FALSE}
-knitr::include_url("https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#91
-")
+```{r embed-xaringan-12, echo=FALSE}
+xaringanExtra::embed_xaringan(url = "https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#91", ratio = "4:3")
 ```
-[Click here to open slides in a new tab (refer to slide #91)](https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#91)
+
+[Use this link to open slides in a new tab (refer to slide #91)](https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#91)
 
 #### Video {-}
 

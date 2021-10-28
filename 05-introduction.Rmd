@@ -1,3 +1,19 @@
 # Introduction
 
+## R & Data for Humanities
+
 <embed src="slides/pdf/0_introduction_slides.pdf" type="application/pdf" width="100%" height="600px" />
+
+## R & R Studio
+
+### Video
+
+```{r echo=FALSE}
+vembedr::embed_url("https://www.youtube.com/watch?v=FFYSAUJ305o")
+```
+
+### Slides
+
+```{r embed-xaringan, echo=FALSE}
+xaringanExtra::embed_xaringan(url = "https://utrechtuniversity.github.io/workshop-introduction-to-R-and-data/slides/slides_introduction.html#12", ratio = "4:3")
+```

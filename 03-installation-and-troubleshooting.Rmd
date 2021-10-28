@@ -12,7 +12,7 @@ Because  not every system is equally cooperative in installing everything, we ha
 Please let us know of any errors that you encountered, and how you fixed them!
 We will add these to the guide.
 
-## Installation
+## Installation 
 
 ### Install R and RStudio on a personal laptop. 
 

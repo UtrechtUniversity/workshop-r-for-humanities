@@ -1,6 +1,6 @@
 # Course Materials
 
-For convenience, we've put together links to all the course materials on this page. You can also download a zipped folder containing the R Markdown files & pdf slides: [2021-06-30_r-for-humanities_course-materials.zip](https://github.com/UtrechtUniversity/workshop-r-for-humanities/raw/main/2021-06-30_r-for-humanities_course-materials.zip)
+For convenience, we've put together links to all the course materials on this page. You can also download a zipped folder containing the R Markdown files & pdf slides: [2021-11-02_r-for-humanities_course-materials.zip](https://github.com/UtrechtUniversity/workshop-r-for-humanities/raw/main/2021-11-02_r-for-humanities_course-materials.zip)
 
 ### Introduction {-}
 
